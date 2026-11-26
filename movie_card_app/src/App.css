@@ -1,0 +1,160 @@
+/* Main Page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eaf6f8;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #234653;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+/* Main Heading */
+.container h1 {
+  color: #28677a;
+  font-size: 34px;
+  margin-bottom: 35px;
+}
+
+/* Movie Cards Layout */
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 250px));
+  justify-content: center;
+  gap: 30px;
+  margin: 25px auto 50px;
+}
+
+/* Individual Movie Card */
+.movie-card {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(49, 112, 130, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(49, 112, 130, 0.2);
+}
+
+/* Movie Poster */
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Movie Details */
+.movie-details {
+  padding: 15px 5px 5px;
+}
+
+.movie-card h3 {
+  color: #28677a;
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+.movie-card p {
+  color: #607d8b;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Watchlist Button */
+.movie-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background-color: #76b8c8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-card button:hover {
+  background-color: #438da2;
+}
+
+.movie-card button:disabled {
+  background-color: #a8c9cf;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 15px;
+  }
+
+  .container h1 {
+    font-size: 26px;
+  }
+
+  .movie-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .movie-card img {
+    height: 220px;
+  }
+}
+
+/* Search Box */
+.search-box {
+  width: 90%;
+  max-width: 500px;
+  padding: 15px 22px;
+  margin: 15px auto 35px;
+
+  background-color: #ffffff;
+  color: #28677a;
+
+  border: 2px solid #c5e3e9;
+  border-radius: 30px;
+
+  font-size: 16px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  outline: none;
+  display: block;
+
+  box-shadow: 0 4px 15px rgba(49, 112, 130, 0.10);
+  transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.search-box::placeholder {
+  color: #91aeb8;
+}
+
+/* Focus Effect */
+.search-box:focus {
+  border-color: #65aabd;
+  box-shadow: 0 0 10px rgba(101, 170, 189, 0.25);
+}
+
+/* Hover Effect */
+.search-box:hover {
+  border-color: #8fc5d2;
+}
+
